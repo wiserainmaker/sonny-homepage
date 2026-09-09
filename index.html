@@ -15,7 +15,8 @@
   --sage:#E7F0EB; --lime:#E4EEAD; --dim:#556760; --faint:#8CA097;
   --line:rgba(24,50,44,.14); --line2:rgba(20,125,112,.30);
   --card:rgba(255,255,255,.78); --card-line:rgba(24,50,44,.10);
-  --reuse:#147D70; --extend:#2D8CA8; --develop:#5A6AA0; --review:#B9822B;
+  --reuse:#FDF4AF; --extend:#A5E9DD; --develop:#6FBEB2; --review:#34908B;
+  --reuse-ink:#96771A; --extend-ink:#2E8C7F; --develop-ink:#2A8579; --review-ink:#2A7A73;
   --ac:var(--teal); --ac2:var(--teal-deep);
   --f-disp:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Nanum Gothic','Noto Sans KR',system-ui,sans-serif;
   --f-body:'Pretendard','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Nanum Gothic','Noto Sans KR',system-ui,sans-serif;
@@ -164,7 +165,7 @@ h2 em{font-style:normal;color:var(--teal)}
 .bubble{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px 16px 16px 4px;padding:15px 20px;font-size:17px;color:var(--ink);font-weight:500;box-shadow:0 8px 22px -18px rgba(14,60,54,.5);display:flex;gap:12px;align-items:center;width:fit-content;max-width:100%}
 .bubble .bn{font-family:var(--f-mono);font-size:12px;color:#fff;background:var(--teal);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto}
 .dmini{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:15px 17px;background:#fff;box-shadow:0 8px 22px -20px rgba(14,60,54,.5)}
-.dmini .en{font-family:var(--f-disp);font-weight:800;font-size:14px;color:var(--c);letter-spacing:.01em}
+.dmini .en{font-family:var(--f-disp);font-weight:800;font-size:14px;color:var(--c-ink,var(--c));letter-spacing:.01em}
 .dmini .ko{font-size:17px;font-weight:800;color:var(--ink);margin-top:1px}
 .dmini p{margin:5px 0 0;font-size:13px;color:var(--dim);line-height:1.5}
 .g2x2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
@@ -173,7 +174,7 @@ h2 em{font-style:normal;color:var(--teal)}
 .pathcard{border:1px solid var(--line);border-radius:14px;background:#fff;padding:20px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 28px -22px rgba(14,60,54,.5)}
 .pathcard .top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 .rolebadge{font-family:var(--f-disp);font-weight:800;font-size:16px;color:#fff;background:var(--teal);border-radius:8px;padding:6px 14px;white-space:nowrap}
-.rolebadge.dev{background:var(--develop)}
+.rolebadge.dev{background:var(--develop-ink)}
 .pathcard .uc{font-size:19px;font-weight:800;color:var(--ink)}
 .pathcard .goal{font-size:13.5px;color:var(--dim);line-height:1.5}
 .steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -193,13 +194,13 @@ h2 em{font-style:normal;color:var(--teal)}
 @keyframes caret{50%{opacity:0}}
 .dtable{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .dtable .cell{display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:8px;padding:8px 11px;background:#fff}
-.dtable .cell .en{font-family:var(--f-disp);font-size:11.5px;font-weight:800;color:var(--c)}
+.dtable .cell .en{font-family:var(--f-disp);font-size:11.5px;font-weight:800;color:var(--c-ink,var(--c))}
 .dtable .cell .ko{font-size:13.5px;font-weight:700;color:var(--ink)}
 .step .pillrow{display:flex;gap:6px;flex-wrap:wrap}
-.pilltag{font-family:var(--f-mono);font-size:10.5px;padding:5px 10px;border-radius:14px;border:1px solid var(--c);color:var(--c);background:color-mix(in oklab,var(--c) 8%,#fff);white-space:nowrap}
+.pilltag{font-family:var(--f-mono);font-size:10.5px;padding:5px 10px;border-radius:14px;border:1px solid var(--c-ink,var(--c));color:var(--c-ink,var(--c));background:color-mix(in oklab,var(--c) 12%,#fff);white-space:nowrap}
 
 /* ─── s5 DEMO (시스템UX 화면 재현) ─── */
-.tagex{position:absolute;top:56px;right:72px;z-index:7;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--review);border:1px dashed var(--review);border-radius:14px;padding:6px 12px;background:color-mix(in oklab,var(--review) 8%,#fff)}
+.tagex{position:absolute;top:56px;right:72px;z-index:7;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--review-ink);border:1px dashed var(--review-ink);border-radius:14px;padding:6px 12px;background:color-mix(in oklab,var(--review) 14%,#fff)}
 .appwin{flex:1;display:flex;flex-direction:column;background:#F4F6FA;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 26px 60px -32px rgba(14,60,54,.55)}
 .appbar{display:flex;justify-content:space-between;align-items:center;padding:15px 26px;background:#fff;border-bottom:1px solid var(--line)}
 .appbar .logo{font-family:var(--f-disp);font-weight:800;font-size:21px;color:#1B2A44}
@@ -269,48 +270,6 @@ h2 em{font-style:normal;color:var(--teal)}
 </style>
 </head>
 <body>
-
-<!-- ▼▼ 인트로 영상 오버레이 (영상 재생 후 소개덱 표시) ▼▼ -->
-<div id="introOverlay" role="dialog" aria-label="인트로 영상">
-  <video id="introVideo" playsinline muted autoplay preload="auto">
-    <source src="intro.mp4" type="video/mp4" />
-  </video>
-  <button id="introSkip" type="button">건너뛰기 ›</button>
-</div>
-<style>
-  #introOverlay{position:fixed;inset:0;z-index:99999;background:#000;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity .6s ease;}
-  #introOverlay.hide{opacity:0;pointer-events:none;}
-  #introVideo{width:100%;height:100%;object-fit:cover;background:#000;}
-  #introSkip{position:absolute;top:20px;right:20px;padding:10px 18px;font-size:14px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.35);border-radius:999px;cursor:pointer;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);transition:background .15s ease;}
-  #introSkip:hover{background:rgba(0,0,0,.7);}
-  html.intro-lock,body.intro-lock{overflow:hidden;}
-</style>
-<script>
-(function(){
-  var overlay=document.getElementById('introOverlay');
-  var video=document.getElementById('introVideo');
-  var skip=document.getElementById('introSkip');
-  if(!overlay){return;}
-  document.documentElement.classList.add('intro-lock');
-  document.body.classList.add('intro-lock');
-  var done=false;
-  function finish(){
-    if(done){return;} done=true;
-    overlay.classList.add('hide');
-    document.documentElement.classList.remove('intro-lock');
-    document.body.classList.remove('intro-lock');
-    try{video.pause();}catch(e){}
-    setTimeout(function(){ if(overlay&&overlay.parentNode){overlay.parentNode.removeChild(overlay);} },700);
-  }
-  video.addEventListener('ended', finish);   // 영상 끝나면 자동 전환
-  skip.addEventListener('click', finish);     // 건너뛰기 버튼
-  video.addEventListener('error', finish);    // 영상 파일 없거나 오류 시 바로 소개덱으로
-  var p = video.play && video.play();
-  if(p && p.catch){ p.catch(function(){ /* 자동재생 차단됨: 건너뛰기 버튼으로 진행 가능 */ }); }
-})();
-</script>
-<!-- ▲▲ 인트로 영상 오버레이 끝 ▲▲ -->
-
 <div id="app">
   <div class="stage" id="stage">
     <canvas id="bg" aria-hidden="true"></canvas>
@@ -326,7 +285,7 @@ h2 em{font-style:normal;color:var(--teal)}
     <div class="hud repo">ANABADA · AI Re-use 어드바이저</div>
 
     <!-- ═══ 01 표지 ═══ -->
-    <section class="slide dark on" data-tag="표지">
+    <section class="slide dark" data-tag="표지">
       <div class="floor" aria-hidden="true"><i></i></div>
       <div class="head cover-head rv">
         <div class="eyebrow big">개발에도 아나바다가 필요합니다</div>
@@ -382,10 +341,10 @@ h2 em{font-style:normal;color:var(--teal)}
             <h3 style="font-size:23px;font-weight:800;margin:0;letter-spacing:-.01em;line-height:1.3">AI가 <span style="color:var(--teal)">4가지 기준</span>으로<br>기존 사내 자산을 찾아 알려줍니다</h3>
           </div>
           <div class="g2x2 rv" style="--d:660ms;margin-top:6px">
-            <div class="dmini" style="--c:var(--reuse)"><div class="en">REUSE</div><div class="ko">그대로 쓰기</div><p>기존 자산을 그대로 활용</p></div>
-            <div class="dmini" style="--c:var(--extend)"><div class="en">EXTEND EXISTING</div><div class="ko">고쳐 쓰기</div><p>필요한 부분만 수정·확장</p></div>
-            <div class="dmini" style="--c:var(--develop)"><div class="en">DEVELOP</div><div class="ko">새로 만들기</div><p>적절한 자산이 없어 신규 개발</p></div>
-            <div class="dmini" style="--c:var(--review)"><div class="en">NEEDS REVIEW</div><div class="ko">추가 검토</div><p>근거 부족·자동 판단 어려움</p></div>
+            <div class="dmini" style="--c:var(--reuse);--c-ink:var(--reuse-ink)"><div class="en">REUSE</div><div class="ko">그대로 쓰기</div><p>기존 자산을 그대로 활용</p></div>
+            <div class="dmini" style="--c:var(--extend);--c-ink:var(--extend-ink)"><div class="en">EXTEND EXISTING</div><div class="ko">고쳐 쓰기</div><p>필요한 부분만 수정·확장</p></div>
+            <div class="dmini" style="--c:var(--develop);--c-ink:var(--develop-ink)"><div class="en">DEVELOP</div><div class="ko">새로 만들기</div><p>적절한 자산이 없어 신규 개발</p></div>
+            <div class="dmini" style="--c:var(--review);--c-ink:var(--review-ink)"><div class="en">NEEDS REVIEW</div><div class="ko">추가 검토</div><p>근거 부족·자동 판단 어려움</p></div>
           </div>
         </div>
       </div>
@@ -398,61 +357,7 @@ h2 em{font-style:normal;color:var(--teal)}
       </div>
     </section>
 
-    <!-- ═══ 03 사용 흐름 (Sales / Developer 경로) ═══ -->
-    <section class="slide" data-tag="사용 흐름">
-      <div class="head">
-        <div class="eyebrow rv">User Path · 두 직군의 사용 흐름</div>
-        <h2 class="rv" style="--d:80ms">영업과 개발, <em>이렇게 씁니다</em></h2>
-      </div>
-      <div class="body" style="flex-direction:column;gap:16px">
-        <div class="pathcard rv" style="--d:220ms">
-          <div class="top">
-            <span class="rolebadge">Sales / Marketing</span>
-            <span class="uc">DDI 경쟁사 센싱</span>
-            <span class="goal">경쟁사 제품 Roadmap · 판매 전망 · 시장/고객 동향 센싱 및 반복 조사 효율화</span>
-          </div>
-          <div class="steps">
-            <span class="st">범위 정의</span><span class="ar">→</span>
-            <span class="st key">기존 업무/자료 확인</span><span class="ar">→</span>
-            <span class="st key">Source 수집</span><span class="ar">→</span>
-            <span class="st">Cross-check</span><span class="ar">→</span>
-            <span class="st">Outlier/Consensus 검증</span><span class="ar">→</span>
-            <span class="st">Fact/Estimate 구분</span><span class="ar">→</span>
-            <span class="st">분석</span>
-          </div>
-        </div>
-        <div class="pathcard rv" style="--d:400ms">
-          <div class="top">
-            <span class="rolebadge dev">Developer</span>
-            <span class="uc">기존 프로젝트 기능 개발 / 개선</span>
-            <span class="goal">기존 프로젝트에 신규 기능 추가 · 성능/버그 개선 · 지원 범위 확장</span>
-          </div>
-          <div class="steps">
-            <span class="st">요구사항 발생</span><span class="ar">→</span>
-            <span class="st">문제/요구사항 파악</span><span class="ar">→</span>
-            <span class="st">프로젝트 구조 파악</span><span class="ar">→</span>
-            <span class="st key">Code·문서·Issue·PR 탐색</span><span class="ar">→</span>
-            <span class="st key">활용 가능성 검토</span><span class="ar">→</span>
-            <span class="st key">재사용/확장/신규 판단</span><span class="ar">→</span>
-            <span class="st">구현</span><span class="ar">→</span>
-            <span class="st">테스트/리뷰</span>
-          </div>
-        </div>
-        <div class="banner rv" style="--d:600ms">
-          <span class="mk">잠깐!</span>
-          <span>개발 버튼 누르기 전에 <strong>아나바다부터 켜세요.</strong> 강조된 단계가 바로 아나바다가 돕는 <strong>‘확인·탐색·판단’</strong> 구간입니다.</span>
-        </div>
-      </div>
-      <div class="pnote">
-        <h5>SCRIPT</h5>
-        <p>같은 고민을 두 직군이 다르게 겪습니다. <b>영업/마케팅</b>은 경쟁사 센싱처럼 반복 조사를 하죠 — 범위 정의부터 기존 자료 확인, Source 수집, Cross-check, 검증, Fact/Estimate 구분, 분석까지. <b>개발자</b>는 기능 개발·개선에서 요구사항 파악, 구조 파악, Code·문서·Issue·PR 탐색, 활용 가능성 검토, 재사용/확장/신규 판단을 거칩니다.</p>
-        <p>공통점은 <b>본격적으로 만들기 전에 '이미 있는 걸 확인·탐색·판단'하는 구간</b>이 있다는 겁니다. 잠깐! 개발 버튼 누르기 전에 아나바다부터 켜세요 — 바로 이 구간을 도와줍니다.</p>
-        <div class="next"><b>다음 장</b> — 그럼 실제로 어떻게 쓰는지, 세 단계로 보여드리겠습니다.</div>
-        <div class="src">출처: revise요청 §3 (Sales / Developer Use Case · Happy Path 표). 아나바다 TXT §4-3장 필수 카피 유지.</div>
-      </div>
-    </section>
-
-    <!-- ═══ 04 사용법 ═══ -->
+    <!-- ═══ 02 사용법 ═══ -->
     <section class="slide" data-tag="사용법">
       <div class="head">
         <div class="eyebrow rv">How to use · 어떻게 사용하냐면!</div>
@@ -480,10 +385,10 @@ h2 em{font-style:normal;color:var(--teal)}
             </ul>
             <div class="mini">
               <div class="dtable">
-                <div class="cell" style="--c:var(--reuse)"><span class="en">REUSE</span><span class="ko">그대로 쓰기</span></div>
-                <div class="cell" style="--c:var(--extend)"><span class="en">EXTEND</span><span class="ko">고쳐 쓰기</span></div>
-                <div class="cell" style="--c:var(--develop)"><span class="en">DEVELOP</span><span class="ko">새로 만들기</span></div>
-                <div class="cell" style="--c:var(--review)"><span class="en">NEEDS REVIEW</span><span class="ko">추가 검토</span></div>
+                <div class="cell" style="--c:var(--reuse);--c-ink:var(--reuse-ink)"><span class="en">REUSE</span><span class="ko">그대로 쓰기</span></div>
+                <div class="cell" style="--c:var(--extend);--c-ink:var(--extend-ink)"><span class="en">EXTEND</span><span class="ko">고쳐 쓰기</span></div>
+                <div class="cell" style="--c:var(--develop);--c-ink:var(--develop-ink)"><span class="en">DEVELOP</span><span class="ko">새로 만들기</span></div>
+                <div class="cell" style="--c:var(--review);--c-ink:var(--review-ink)"><span class="en">NEEDS REVIEW</span><span class="ko">추가 검토</span></div>
               </div>
             </div>
           </div>
@@ -496,10 +401,10 @@ h2 em{font-style:normal;color:var(--teal)}
             </ul>
             <div class="mini">
               <div class="pillrow">
-                <span class="pilltag" style="--c:var(--reuse)">그대로 쓰기</span>
-                <span class="pilltag" style="--c:var(--extend)">고쳐 쓰기</span>
-                <span class="pilltag" style="--c:var(--develop)">새로 만들기</span>
-                <span class="pilltag" style="--c:var(--review)">추가 검토</span>
+                <span class="pilltag" style="--c:var(--reuse);--c-ink:var(--reuse-ink)">그대로 쓰기</span>
+                <span class="pilltag" style="--c:var(--extend);--c-ink:var(--extend-ink)">고쳐 쓰기</span>
+                <span class="pilltag" style="--c:var(--develop);--c-ink:var(--develop-ink)">새로 만들기</span>
+                <span class="pilltag" style="--c:var(--review);--c-ink:var(--review-ink)">추가 검토</span>
               </div>
             </div>
           </div>
@@ -508,8 +413,61 @@ h2 em{font-style:normal;color:var(--teal)}
       <div class="pnote">
         <h5>SCRIPT</h5>
         <p>어떻게 사용하냐면! 딱 세 단계입니다. <b>1단계, 질문한다</b> — 만들고 싶은 결과물을 자유롭게 대화하듯 설명하면 됩니다. <b>2단계, 자료 탐색 후 유사 자산(추천 후보)을 보여줍니다</b> — 4가지 기준으로 AI의 판단 결과가 표시되고, 판단 근거와 적합도 분석, 참고 자료까지 확인할 수 있습니다. <b>3단계, 사용자는 유사 자산을 둘러보고 의사결정을 진행합니다.</b></p>
-        <div class="next"><b>다음 장</b> — 실제 화면으로 보겠습니다.</div>
+        <div class="next"><b>다음 장</b> — 그럼 실제 두 직군이 이 흐름을 어디에 얹어 쓰는지, 사용 흐름을 보겠습니다.</div>
         <div class="src">출처: revise요청 §4 (3단계 문구). 4개 Decision 표기 유지.</div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 사용 흐름 (Sales / Developer 경로) ═══ -->
+    <section class="slide" data-tag="사용 흐름">
+      <div class="head">
+        <div class="eyebrow rv">User Path · 두 직군의 사용 흐름</div>
+        <h2 class="rv" style="--d:80ms">영업과 개발, <em>흐름은 하나</em>입니다</h2>
+      </div>
+      <div class="body" style="flex-direction:column;gap:16px">
+        <div class="pathcard rv" style="--d:220ms">
+          <div class="top">
+            <span class="rolebadge">Sales / Marketing</span>
+            <span class="uc">DDI 경쟁사 센싱</span>
+            <span class="goal">경쟁사 제품 Roadmap · 판매 전망 · 시장/고객 동향 센싱 및 반복 조사 효율화</span>
+          </div>
+          <div class="steps">
+            <span class="st">범위 정의</span><span class="ar">→</span>
+            <span class="st">문제·요구사항 파악</span><span class="ar">→</span>
+            <span class="st">기존 자산·자료 파악</span><span class="ar">→</span>
+            <span class="st key">관련 자료 탐색</span><span class="ar">→</span>
+            <span class="st key">활용 가능성 검토</span><span class="ar">→</span>
+            <span class="st key">재사용/확장/신규 판단</span><span class="ar">→</span>
+            <span class="st">구현</span>
+          </div>
+        </div>
+        <div class="pathcard rv" style="--d:400ms">
+          <div class="top">
+            <span class="rolebadge dev">Developer</span>
+            <span class="uc">기존 프로젝트 기능 개발 / 개선</span>
+            <span class="goal">기존 프로젝트에 신규 기능 추가 · 성능/버그 개선 · 지원 범위 확장</span>
+          </div>
+          <div class="steps">
+            <span class="st">요구사항 발생</span><span class="ar">→</span>
+            <span class="st">문제·요구사항 파악</span><span class="ar">→</span>
+            <span class="st">기존 자산·자료 파악</span><span class="ar">→</span>
+            <span class="st key">관련 자료 탐색</span><span class="ar">→</span>
+            <span class="st key">활용 가능성 검토</span><span class="ar">→</span>
+            <span class="st key">재사용/확장/신규 판단</span><span class="ar">→</span>
+            <span class="st">구현</span>
+          </div>
+        </div>
+        <div class="banner rv" style="--d:600ms">
+          <span class="mk">잠깐!</span>
+          <span>시작점(범위 정의 · 요구사항 발생)만 다를 뿐, <strong>흐름은 동일합니다.</strong> 강조된 단계가 아나바다가 돕는 <strong>‘탐색 · 검토 · 판단’</strong> 구간입니다.</span>
+        </div>
+      </div>
+      <div class="pnote">
+        <h5>SCRIPT</h5>
+        <p>영업/마케팅과 개발자, 두 직군의 고민은 사실 <b>같은 흐름</b>입니다. 시작점만 다릅니다 — 영업은 '범위 정의'로, 개발은 '요구사항 발생'으로 출발하죠. 그 뒤로는 문제·요구사항 파악, 기존 자산·자료 파악, 관련 자료 탐색, 활용 가능성 검토, <b>재사용/확장/신규 판단</b>을 거쳐 <b>구현</b>으로 끝나는 동일한 경로입니다.</p>
+        <p>강조된 '탐색 · 검토 · 판단' 구간이 바로 아나바다가 돕는 부분입니다. 잠깐! 개발 버튼 누르기 전에 아나바다부터 켜세요 — 두 직군 모두 여기서 시간을 아낍니다.</p>
+        <div class="next"><b>다음 장</b> — 그럼 실제 화면으로 보겠습니다.</div>
+        <div class="src">출처: revise요청 §3 (Sales / Developer Use Case · Happy Path, 공통 흐름 정렬). 아나바다 TXT §4-3장 필수 카피 유지.</div>
       </div>
     </section>
 
@@ -691,8 +649,8 @@ h2 em{font-style:normal;color:var(--teal)}
   /* 아젠다 항목 : {슬라이드 index, 번호, 라벨} — 표지/마무리는 레일 숨김 */
   var AGENDA=[
     {i:1,n:'01',t:'문제와 해답'},
-    {i:2,n:'02',t:'사용 흐름'},
-    {i:3,n:'03',t:'사용법'},
+    {i:2,n:'02',t:'사용법'},
+    {i:3,n:'03',t:'사용 흐름'},
     {i:4,n:'04',t:'데모'},
     {i:5,n:'05',t:'판단 구조'}
   ];
